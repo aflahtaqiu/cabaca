@@ -9,7 +9,11 @@
         android:id="@+id/genreFragment"
         android:name="id.aflah.cabaca.ui.genre.GenreFragment"
         android:label="genre_fragment"
-        tools:layout="@layout/genre_fragment" />
+        tools:layout="@layout/genre_fragment" >
+        <action
+            android:id="@+id/action_genreFragment_to_detailBookFragment"
+            app:destination="@id/detailBookFragment" />
+    </fragment>
     <fragment
         android:id="@+id/newBookFragment"
         android:name="id.aflah.cabaca.ui.newbook.NewBookFragment"

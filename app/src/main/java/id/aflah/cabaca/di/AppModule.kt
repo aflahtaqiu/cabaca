@@ -54,8 +54,4 @@ class AppModule(private val app: Application) {
     @Provides
     @Singleton
     fun provideDetailWriterViewModel(repository: CabacaRemoteRepository) = DetailWriterViewModel(repository)
-
-    @Provides
-    @Singleton
-    fun provideGenreAdapter() = GenresAdapter()
 }

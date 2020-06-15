@@ -9,7 +9,7 @@ import id.aflah.cabaca.R
 import id.aflah.cabaca.databinding.ItemGenreBinding
 import id.aflah.cabaca.model.Genres
 
-class GenresAdapter : RecyclerView.Adapter<GenresAdapter.GenresViewHolder>() {
+class GenresAdapter(private val listener: GenresCallback) : RecyclerView.Adapter<GenresAdapter.GenresViewHolder>() {
 
     inner class GenresViewHolder( val binding: ItemGenreBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind (item: Genres) = binding.apply {
@@ -30,6 +30,10 @@ class GenresAdapter : RecyclerView.Adapter<GenresAdapter.GenresViewHolder>() {
     override fun onBindViewHolder(holder: GenresViewHolder, position: Int) {
         val item = items[position]
         holder.bind(item)
+
+        holder.itemView.setOnClickListener {
+            listener.onGenreClicked(item.id)
+        }
     }
 
     fun addItems (genres: List<Genres>) {
@@ -37,5 +41,9 @@ class GenresAdapter : RecyclerView.Adapter<GenresAdapter.GenresViewHolder>() {
             items.clear()
         items.addAll(genres)
         notifyDataSetChanged()
+    }
+
+    interface GenresCallback {
+        fun onGenreClicked(idGenre: Int)
     }
 }
