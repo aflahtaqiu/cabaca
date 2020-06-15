@@ -42,7 +42,7 @@ data class Book (
 	@SerializedName("view_count") val view_count : Int,
 	@SerializedName("User_review") val user_review : String,
 	@SerializedName("average_rate") val average_rate : Int,
-	@SerializedName("decimal_rate") val decimal_rate : Int,
+	@SerializedName("decimal_rate") val decimal_rate : Double,
 	@SerializedName("rate_sum") val rate_sum : Double,
 	@SerializedName("reviews") val reviews : List<String>,
 	@SerializedName("happyhour") val happyhour : Boolean,

@@ -5,12 +5,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import id.aflah.cabaca.R
-import id.aflah.cabaca.databinding.ItemGenreBinding
 import id.aflah.cabaca.databinding.ItemNewBookBinding
 import id.aflah.cabaca.model.Book
 import id.aflah.cabaca.model.Genres
 
-class NewBooksAdapter: RecyclerView.Adapter<NewBooksAdapter.NewBooksViewHolder>() {
+class NewBooksAdapter constructor(private val listener: NewBookAdapterCallback) : RecyclerView.Adapter<NewBooksAdapter.NewBooksViewHolder>() {
 
     inner class NewBooksViewHolder (val binding:ItemNewBookBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind (item : Book) = binding.apply {
@@ -31,6 +30,10 @@ class NewBooksAdapter: RecyclerView.Adapter<NewBooksAdapter.NewBooksViewHolder>(
     override fun onBindViewHolder(holder: NewBooksViewHolder, position: Int) {
         val item = items[position]
         holder.bind(item)
+
+        holder.itemView.setOnClickListener {
+            listener.onItemClicked(item.id)
+        }
     }
 
     fun addItems (books: List<Book>) {
@@ -38,5 +41,9 @@ class NewBooksAdapter: RecyclerView.Adapter<NewBooksAdapter.NewBooksViewHolder>(
             items.clear()
         items.addAll(books)
         notifyDataSetChanged()
+    }
+
+    interface NewBookAdapterCallback{
+        fun onItemClicked(idBook: Int)
     }
 }

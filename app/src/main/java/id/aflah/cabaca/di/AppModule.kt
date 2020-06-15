@@ -6,6 +6,8 @@ import dagger.Module
 import dagger.Provides
 import id.aflah.cabaca.data.ApiEndpoint
 import id.aflah.cabaca.data.CabacaRemoteRepository
+import id.aflah.cabaca.ui.detailbook.DetailBookViewModel
+import id.aflah.cabaca.ui.detailwriter.DetailWriterViewModel
 import id.aflah.cabaca.ui.genre.GenreViewModel
 import id.aflah.cabaca.ui.genre.GenresAdapter
 import id.aflah.cabaca.ui.newbook.NewBookViewModel
@@ -47,9 +49,13 @@ class AppModule(private val app: Application) {
 
     @Provides
     @Singleton
-    fun provideGenreAdapter() = GenresAdapter()
+    fun provideDetailBookViewModel(repository: CabacaRemoteRepository) = DetailBookViewModel(repository)
 
     @Provides
     @Singleton
-    fun provideNewBooksAdapter() = NewBooksAdapter()
+    fun provideDetailWriterViewModel(repository: CabacaRemoteRepository) = DetailWriterViewModel(repository)
+
+    @Provides
+    @Singleton
+    fun provideGenreAdapter() = GenresAdapter()
 }
