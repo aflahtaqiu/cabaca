@@ -1,11 +1,13 @@
-package id.aflah.cabaca.model
+package id.aflah.cabaca.model.response
 
 import com.google.gson.annotations.SerializedName
+import id.aflah.cabaca.model.Book
 
-data class ResponseDetailBook(
+data class ResponseBooks(
     @SerializedName("success")
     val success: Boolean,
 
     @SerializedName("result")
-    val result: Book
+    val result: List<Book>
+
 )
