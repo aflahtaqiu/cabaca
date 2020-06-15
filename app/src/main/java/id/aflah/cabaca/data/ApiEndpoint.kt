@@ -1,14 +1,13 @@
 package id.aflah.cabaca.data
 
-import id.aflah.cabaca.model.response.ResponseBooks
 import id.aflah.cabaca.model.ResponseGenre
+import id.aflah.cabaca.model.response.ResponseBooks
 import id.aflah.cabaca.model.response.ResponseDetailBook
 import id.aflah.cabaca.model.response.ResponseDetailWriter
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Path
 import retrofit2.http.Query
-import javax.annotation.Nullable
 
 interface ApiEndpoint {
 

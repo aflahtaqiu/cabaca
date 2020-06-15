@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import id.aflah.cabaca.data.CabacaRemoteRepository
 import id.aflah.cabaca.model.DataResponse
-import id.aflah.cabaca.model.ResponseGenre
 import id.aflah.cabaca.model.response.ResponseBooks
 import kotlinx.coroutines.launch
 import javax.inject.Inject

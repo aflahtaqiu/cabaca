@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import id.aflah.cabaca.R
 import id.aflah.cabaca.databinding.ItemNewBookBinding
 import id.aflah.cabaca.model.Book
-import id.aflah.cabaca.model.Genres
 
 class NewBooksAdapter constructor(private val listener: NewBookAdapterCallback) : RecyclerView.Adapter<NewBooksAdapter.NewBooksViewHolder>() {
 

@@ -2,18 +2,15 @@ package id.aflah.cabaca.ui.newbook
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import id.aflah.cabaca.CabacaApplication
 import id.aflah.cabaca.R
-import id.aflah.cabaca.ui.genre.GenreViewModel
-import kotlinx.android.synthetic.main.genre_fragment.*
 import kotlinx.android.synthetic.main.new_book_fragment.*
 import javax.inject.Inject
 
@@ -44,7 +41,6 @@ class NewBookFragment : Fragment(), NewBooksAdapter.NewBookAdapterCallback {
 
         viewModel.booksLiveData.observe(viewLifecycleOwner, Observer {
             adapter.addItems(it.result)
-            Log.e("newbook fragment", "jumlah buku baru =  ${it.result.size}")
         })
     }
 

@@ -3,12 +3,12 @@
 
     <item
         android:id="@+id/genreFragment"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:title="@string/genre" />
 
     <item
         android:id="@+id/newBookFragment"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:title="@string/new_books" />
 
 </menu>

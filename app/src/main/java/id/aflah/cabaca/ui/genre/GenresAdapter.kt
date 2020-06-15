@@ -1,6 +1,5 @@
 package id.aflah.cabaca.ui.genre
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil

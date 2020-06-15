@@ -2,7 +2,6 @@ package id.aflah.cabaca.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import id.aflah.cabaca.data.ApiEndpoint
 import id.aflah.cabaca.model.DataResponse
 import id.aflah.cabaca.model.ResponseGenre
 import id.aflah.cabaca.model.response.ResponseBooks

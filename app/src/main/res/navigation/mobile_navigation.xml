@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/genreFragment"
         android:name="id.aflah.cabaca.ui.genre.GenreFragment"
-        android:label="genre_fragment"
-        tools:layout="@layout/genre_fragment" >
+        android:label="Book Genres"
+        tools:layout="@layout/genre_fragment">
         <action
             android:id="@+id/action_genreFragment_to_detailBookFragment"
             app:destination="@id/detailBookFragment" />
@@ -17,8 +17,8 @@
     <fragment
         android:id="@+id/newBookFragment"
         android:name="id.aflah.cabaca.ui.newbook.NewBookFragment"
-        android:label="new_book_fragment"
-        tools:layout="@layout/new_book_fragment" >
+        android:label="@string/new_books"
+        tools:layout="@layout/new_book_fragment">
         <action
             android:id="@+id/action_newBookFragment_to_detailBookFragment"
             app:destination="@id/detailBookFragment" />
@@ -26,8 +26,8 @@
     <fragment
         android:id="@+id/detailBookFragment"
         android:name="id.aflah.cabaca.ui.detailbook.DetailBookFragment"
-        android:label="detail_book_fragment"
-        tools:layout="@layout/detail_book_fragment" >
+        android:label="Detail Book"
+        tools:layout="@layout/detail_book_fragment">
         <argument
             android:name="idBook"
             app:argType="integer" />
@@ -38,8 +38,8 @@
     <fragment
         android:id="@+id/detailWriterFragment"
         android:name="id.aflah.cabaca.ui.detailwriter.DetailWriterFragment"
-        android:label="detail_writer_fragment"
-        tools:layout="@layout/detail_writer_fragment" >
+        android:label="Detail Writer"
+        tools:layout="@layout/detail_writer_fragment">
         <argument
             android:name="idWriter"
             app:argType="integer" />

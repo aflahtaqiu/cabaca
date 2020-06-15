@@ -9,9 +9,7 @@ import id.aflah.cabaca.data.CabacaRemoteRepository
 import id.aflah.cabaca.ui.detailbook.DetailBookViewModel
 import id.aflah.cabaca.ui.detailwriter.DetailWriterViewModel
 import id.aflah.cabaca.ui.genre.GenreViewModel
-import id.aflah.cabaca.ui.genre.GenresAdapter
 import id.aflah.cabaca.ui.newbook.NewBookViewModel
-import id.aflah.cabaca.ui.newbook.NewBooksAdapter
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
