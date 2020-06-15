@@ -94,7 +94,7 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="16dp"
                     android:gravity="end|center"
-                    android:onClick="@{(idWriter) -> fragment.onDetailWriterClicked(book.writer_id)}"/>
+                    android:onClick="@{(idWriter) -> fragment.onDetailWriterClicked(book.writerByWriter_id.user_id)}"/>
 
 
                 <TextView

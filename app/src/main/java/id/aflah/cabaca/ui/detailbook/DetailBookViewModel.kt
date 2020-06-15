@@ -22,7 +22,7 @@ class DetailBookViewModel @Inject constructor(private val repository: CabacaRemo
                     bookLiveData.value = result.data
                 }
                 is DataResponse.Error -> {
-                    Log.e("lkele error getgenres", result.message)
+                    Log.e("error getdetailbook", result.message)
                 }
             }
         }

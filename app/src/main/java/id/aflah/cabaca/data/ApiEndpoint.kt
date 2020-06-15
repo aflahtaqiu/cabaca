@@ -41,8 +41,8 @@ interface ApiEndpoint {
 
     //No 4
     @Headers("x-dreamfactory-api-key:25e0bf00ab2fa7f03a9fa57035139e47ccb28c20658f6de907b8011347e369fb")
-    @GET("writer/detail/{idWriter}")
+    @GET("writer/detail/{idUser}")
     suspend fun getDetailWriter(
-        @Path("idWriter") idWriter: Int
+        @Path("idUser") idUser: Int
     ): ResponseDetailWriter
 }

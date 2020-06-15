@@ -14,7 +14,7 @@ data class Writer(
     @SerializedName("deskripsi") val deskripsi : String,
     @SerializedName("gender") val gender : String,
     @SerializedName("birthday") val birthday : String,
-    @SerializedName("karya") val karya : List<String>,
+    @SerializedName("karya") val listKarya : List<Karya>,
     @SerializedName("current_level") val current_level : Int,
     @SerializedName("count_follower") val count_follower : Int,
     @SerializedName("count_following") val count_following : Int,

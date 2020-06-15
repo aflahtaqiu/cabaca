@@ -69,11 +69,11 @@ class CabacaRemoteRepository @Inject constructor(private val apiEndpoint: ApiEnd
         return  liveData
     }
 
-    suspend fun getDetailWriter(idWriter:Int) :LiveData<DataResponse<ResponseDetailWriter>> {
+    suspend fun getDetailWriter(idUser:Int) :LiveData<DataResponse<ResponseDetailWriter>> {
         val liveData = MutableLiveData<DataResponse<ResponseDetailWriter>>()
         withContext(ioDispatcher) {
             try {
-                val successResponse = apiEndpoint.getDetailWriter(idWriter)
+                val successResponse = apiEndpoint.getDetailWriter(idUser)
                 liveData.postValue(DataResponse.Success(successResponse))
             } catch (e:Exception) {
                 liveData.postValue(DataResponse.Error(e.localizedMessage))
