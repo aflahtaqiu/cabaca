@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/genreFragment">
+
+    <fragment
+        android:id="@+id/genreFragment"
+        android:name="id.aflah.cabaca.ui.genre.GenreFragment"
+        android:label="genre_fragment"
+        tools:layout="@layout/genre_fragment" />
+    <fragment
+        android:id="@+id/newBookFragment"
+        android:name="id.aflah.cabaca.ui.newbook.NewBookFragment"
+        android:label="new_book_fragment"
+        tools:layout="@layout/new_book_fragment" />
+</navigation>
