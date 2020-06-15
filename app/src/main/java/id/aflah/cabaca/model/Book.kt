@@ -44,7 +44,6 @@ data class Book (
 	@SerializedName("average_rate") val average_rate : Int,
 	@SerializedName("decimal_rate") val decimal_rate : Double,
 	@SerializedName("rate_sum") val rate_sum : Double,
-	@SerializedName("reviews") val reviews : List<String>,
 	@SerializedName("happyhour") val happyhour : Boolean,
 	@SerializedName("BookChapter_by_book_id") val bookChapter_byBookId : List<BookChapterByBookId>,
 	@SerializedName("chapter_count") val chapter_count : Int,

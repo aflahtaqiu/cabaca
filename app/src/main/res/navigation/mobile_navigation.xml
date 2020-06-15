@@ -27,10 +27,17 @@
         <argument
             android:name="idBook"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailBookFragment_to_detailWriterFragment"
+            app:destination="@id/detailWriterFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailWriterFragment"
         android:name="id.aflah.cabaca.ui.detailwriter.DetailWriterFragment"
         android:label="detail_writer_fragment"
-        tools:layout="@layout/detail_writer_fragment" />
+        tools:layout="@layout/detail_writer_fragment" >
+        <argument
+            android:name="idWriter"
+            app:argType="integer" />
+    </fragment>
 </navigation>
