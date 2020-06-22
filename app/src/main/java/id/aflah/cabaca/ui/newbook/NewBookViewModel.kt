@@ -13,6 +13,10 @@ import javax.inject.Inject
 class NewBookViewModel @Inject constructor(private val repository: CabacaRemoteRepository) : ViewModel() {
     var booksLiveData : MutableLiveData<ResponseBooks> = MutableLiveData<ResponseBooks>()
 
+    init {
+        getNewBooks()
+    }
+
     fun getNewBooks () {
         viewModelScope.launch {
             when(val result = repository.getNewBooks(10).value) {

@@ -34,8 +34,6 @@ class NewBookFragment : Fragment(), NewBooksAdapter.NewBookAdapterCallback {
         super.onViewCreated(view, savedInstanceState)
         val adapter = NewBooksAdapter(this)
 
-        viewModel.getNewBooks()
-
         rv_new_books.layoutManager = GridLayoutManager(context, 2)
         rv_new_books.adapter = adapter
 

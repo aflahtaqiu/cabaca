@@ -35,8 +35,6 @@ class GenreFragment : Fragment(), GenresAdapter.GenresCallback, BooksAdapter.Boo
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getGenres()
-
         genreAdapter = GenresAdapter(this)
         booksAdapter = BooksAdapter(this)
 

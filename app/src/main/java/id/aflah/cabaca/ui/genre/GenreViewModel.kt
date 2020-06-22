@@ -29,6 +29,10 @@ class GenreViewModel @Inject constructor(private val repository: CabacaRemoteRep
         }
     }
 
+    init {
+        getGenres()
+    }
+
     fun getBooksByCategory (idCategory: Int) {
         viewModelScope.launch {
             when(val result = repository.getBooksByCategory(idCategory).value) {
